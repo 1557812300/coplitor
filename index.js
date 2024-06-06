@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body>div>div{
+          width: 100% !important;
+        }
+        body>div{
+          width: 100% !important;
+          background-color: cadetblue;
+        }
+        .fe3173ed6eda3342aedf{
+            position: fixed;
+            height: 104% !important;
+            min-height: 400px;
+            max-height: 1200px;
+            right: 0px!important;
+            z-index: calc(var(--coze-z-index-iframe) + 1);
+            width: 100%!important;
+            background-color: #f7f7f7!important;
+            border-radius: 0px!important;
+            box-shadow: none !important;
+            bottom: 10px !important;
+        }
+        iframe{
+            width: 75vw!important;
+            margin: auto;
+        }
+        iframe #root > header,footer{
+            display: none!important;
+        }
+        
+        .fe3173ed6eda3342aedf button{
+            display: none!important;
+        }
+        .el-dropdown-menu__item{
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 你的页面内容 -->
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.2/libs/oversea/index.js"></script>
+    <script>
+      // 初始化你的WebChatClient
+      new CozeWebSDK.WebChatClient({
+        config: {
+          bot_id: '7377043828890992657',
+          
+        },
+        componentProps: {
+          title: 'chatGPT-4o',
+          lang: "zh-cn",
+        },
+      });
+
+      // 函数：尝试点击具有指定类的元素
+      function tryClickElementWithClass(className) {
+          var element = document.querySelector('.' + className);
+          if (element) {
+              element.click();
+          } else {
+              // 如果元素还未存在，可以在稍后重试
+              setTimeout(function() {
+                  tryClickElementWithClass(className);
+              }, 200); // 每500毫秒重试一次
+          }
+      }
+
+      // 在页面内容加载完成后尝试点击
+      document.addEventListener('DOMContentLoaded', function() {
+          // 稍等片刻以确保所有脚本都已运行并可能添加了所需的类
+          setTimeout(function() {
+              tryClickElementWithClass('fda3723591e0b38e7e52');
+          }, 500); // 延迟1秒后尝试点击
+      });
+  </script>
+</body>
+</html>
